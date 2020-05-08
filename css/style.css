@@ -130,7 +130,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 @media (min-width: 650px) {
@@ -161,7 +161,7 @@ print {
     width: 80%;
     max-width: 1024px;
     grid-template-columns: .75fr .75fr 1fr;
-    grid-template-rows: .65fr .4fr .4fr .77fr .4fr .55fr;
+    grid-template-rows: .15fr .3fr .3fr .7fr .2fr .27fr;
     grid-template-areas:
       "name name image"
       "work work contacts"
@@ -360,7 +360,7 @@ print {
     padding-top: 0;
     font-size: 75%;
     width: var(--paper-width);
-    height: var(--paper-height);
+    /*height: var(--paper-height);*/
     box-shadow: none;
   }
 
