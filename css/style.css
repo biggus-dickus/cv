@@ -42,8 +42,12 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover:not(.active) {
   text-decoration: underline;
+}
+
+a.active {
+  color: inherit;
 }
 
 .reset-list {
@@ -84,7 +88,9 @@ a:hover {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: "name"
+  grid-template-areas:
+    "lang-nav"
+    "name"
     "image"
     "contacts"
     "work"
@@ -95,7 +101,7 @@ a:hover {
     "hobbies";
   row-gap: 0;
   column-gap: 32px;
-  padding: 1em 2em 0 2em;
+  padding: 1em 2em;
   margin-right: auto;
   margin-left: auto;
   box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.15);
@@ -133,10 +139,30 @@ a:hover {
   justify-content: center;
 }
 
+.lang-nav {
+  grid-area: lang-nav;
+  text-align: right;
+}
+
+.lang-nav-list {
+  font-size: 0;
+}
+
+.lang-nav-list li {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.lang-nav-list li:not(:last-child)::after {
+  content: "|";
+  margin: 0 .35em;
+}
+
 @media (min-width: 650px) {
   .resume {
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
+      "lang-nav lang-nav"
       "name image"
       "contacts contacts"
       "work work"
@@ -160,9 +186,11 @@ print {
   .resume {
     width: 80%;
     max-width: 1024px;
+    padding-top: 1.6em;
     grid-template-columns: .75fr .75fr 1fr;
-    grid-template-rows: .15fr .3fr .3fr .7fr .2fr .27fr;
+    grid-template-rows: .05fr .15fr .3fr .3fr .7fr .2fr .27fr;
     grid-template-areas:
+      "lang-nav lang-nav lang-nav"
       "name name image"
       "work work contacts"
       "work work education"
@@ -177,6 +205,10 @@ print {
 
   .role {
     font-size: 2em;
+  }
+
+  .lang-nav {
+    text-align: left;
   }
 }
 
