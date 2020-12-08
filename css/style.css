@@ -66,6 +66,16 @@ a.active {
   appearance: none;
 }
 
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -360,6 +370,19 @@ print {
   height: 35px;
   opacity: .45;
   transition: opacity .25s ease-out;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.table--fw {
+  width: 100%;
+}
+
+.table td,
+.table th {
+  padding: .225em;
 }
 
 @media (min-width: 900px) {
