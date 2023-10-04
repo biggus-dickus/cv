@@ -301,8 +301,13 @@ print {
   list-style-type: none;
 }
 
-.details>li {
+.details > li {
   padding-bottom: 0.2em;
+}
+
+.details p {
+  margin: 0;
+  line-height: normal;
 }
 
 .date,
