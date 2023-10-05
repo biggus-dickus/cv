@@ -104,7 +104,6 @@ a.active {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas:
-    "lang-nav"
     "name"
     "image"
     "contacts"
@@ -177,7 +176,6 @@ a.active {
   .resume {
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
-      "lang-nav lang-nav"
       "name image"
       "contacts contacts"
       "work work"
@@ -203,9 +201,8 @@ print {
     max-width: 1024px;
     padding-top: 1.6em;
     grid-template-columns: .75fr .75fr 1fr;
-    grid-template-rows: .05fr .15fr .3fr .3fr .7fr .2fr .27fr;
+    grid-template-rows: .15fr .3fr .3fr .7fr .2fr .27fr;
     grid-template-areas:
-      "lang-nav lang-nav lang-nav"
       "name name image"
       "work work contacts"
       "work work education"
