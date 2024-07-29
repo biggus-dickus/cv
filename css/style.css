@@ -313,6 +313,10 @@ print {
   font-weight: normal;
 }
 
+.date {
+  margin-left: .35em;
+}
+
 .role {
   font-size: 2em;
   font-weight: 700;
